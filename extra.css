@@ -1,0 +1,15 @@
+//for changing songs
+next.addEventListener('click', nextSong);
+prev.addEventListener('click', prevSong);
+
+const nextSong = () => {
+  songIndex = (songIndex + 1) % songs.length;
+  newsongs(songs[songIndex]);
+  music.play();
+};
+
+const prevSong = () => {
+  songIndex = (songIndex - 1 + songs.length) % songs.length;
+  newsongs(songs[songIndex]);
+  music.play();
+};
